@@ -1,0 +1,25 @@
+img{
+    width:400px;
+    height:240px;
+    margin:100px 0px 0px 0px;
+}
+
+input{
+    box-shadow:2px 2px 2px #ccc;
+    border:2px solid #ccc;
+    border-radius:40px;
+    font-weight:bold;
+    font-size:16px;
+}
+
+.ab{
+    width:550px;
+    height:30px;    
+    padding:10px 40px;
+}
+
+.input-1{
+    width:120px;
+    height:50px;
+    padding:10px 0px;
+}
