@@ -1,10 +1,23 @@
-img{
-    width:400px;
-    height:240px;
-    margin:100px 0px 0px 0px;
+*{
+    margin:0%;
+    padding:0%;
+    box-sizing:border-box;
 }
 
-input{
+body{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height:100vh;
+}
+
+.logo{
+    display:flex;
+    justify-content:center;
+    margin-bottom:20px;
+}
+
+.input-container input{
     box-shadow:2px 2px 2px #ccc;
     border:2px solid #ccc;
     border-radius:40px;
@@ -12,14 +25,39 @@ input{
     font-size:16px;
 }
 
-.ab{
+.input-container .ab{
     width:550px;
-    height:30px;    
+    height:50px;    
     padding:10px 40px;
 }
 
-.input-1{
+.input-container .input-1{
     width:120px;
     height:50px;
     padding:10px 0px;
+}
+
+/* Media Queries of 750px */
+@media(max-width:750px){
+.logo img{
+    width:300px;
+}
+
+.input-container .ab{
+    width:350px;
+}
+}
+
+/* media queries of 520px */
+@media(max-width:520px){
+.input-container .ab{
+     margin:20px 0px;
+     display:flex;
+     justify-content:center;
+     width:300px;
+}
+
+.input-container .input-1{
+    width:300px;
+}
 }
