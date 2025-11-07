@@ -5,29 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Google Clone - Akbar Qureshi</title>
 
-  <!-- ✅ Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <!-- ✅ CSS -->
   <link rel="stylesheet" href="styles.css">
 
-  <!-- ✅ Favicon (optional) -->
   <link rel="icon" href="logo.png" type="image/png">
 </head>
 
 <body>
-  <!-- 🌙 Light/Dark Mode Toggle -->
   <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
     <span id="theme-icon">🌙</span>
   </button>
 
   <nav class="container">
-    <!-- Logo -->
     <div class="logo fade-in">
       <img src="logo.png" alt="Google Logo">
     </div>
 
-    <!-- Search Bar -->
     <div class="input-container slide-up">
       <form action="https://www.google.com/search" method="get">
         <input 
@@ -44,18 +38,15 @@
     </div>
   </nav>
 
-  <!-- Footer -->
   <footer class="footer fade-in">
     <p>Created by <span>Akbar Qureshi</span> | Inspired by Google</p>
   </footer>
 
-  <!-- ✅ JavaScript -->
   <script>
     const toggle = document.getElementById('theme-toggle');
     const icon = document.getElementById('theme-icon');
     const body = document.body;
 
-    // Load saved theme from localStorage
     if (localStorage.getItem('theme') === 'dark') {
       body.classList.add('dark-mode');
       icon.textContent = '☀️';
