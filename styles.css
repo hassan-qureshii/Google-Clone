@@ -1,11 +1,11 @@
-/* ---------- RESET ---------- */
+/*  RESET  */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* ---------- BODY ---------- */
+/*  BODY  */
 body {
   height: 100vh;
   display: flex;
@@ -19,7 +19,7 @@ body {
   overflow: hidden;
 }
 
-/* ---------- THEME TOGGLE BUTTON ---------- */
+/*  THEME TOGGLE BUTTON  */
 .theme-toggle {
   position: absolute;
   top: 20px;
@@ -41,20 +41,20 @@ body {
   transform: scale(1.1);
 }
 
-/* ---------- CONTAINER ---------- */
+/*  CONTAINER  */
 .container {
   text-align: center;
   animation: fadeIn 1s ease;
 }
 
-/* ---------- LOGO ---------- */
+/*  LOGO  */
 .logo img {
   width: 260px;
   margin-bottom: 25px;
   animation: float 3s ease-in-out infinite;
 }
 
-/* ---------- INPUT CONTAINER ---------- */
+/*  INPUT CONTAINER  */
 .input-container {
   display: flex;
   justify-content: center;
@@ -86,7 +86,7 @@ body {
   transform: scale(1.02);
 }
 
-/* ---------- BUTTON ---------- */
+/*  BUTTON  */
 .search-btn {
   height: 50px;
   width: 130px;
@@ -109,7 +109,7 @@ body {
   box-shadow: 0 6px 15px rgba(15, 76, 154, 0.3);
 }
 
-/* ---------- FOOTER ---------- */
+/*  FOOTER  */
 .footer {
   position: absolute;
   bottom: 20px;
@@ -124,7 +124,7 @@ body {
   color: #0f4c9a;
 }
 
-/* ---------- DARK MODE ---------- */
+/*  DARK MODE  */
 body.dark-mode {
   background: linear-gradient(135deg, #0a1833, #102b50);
   color: #f3f8fc;
@@ -150,7 +150,7 @@ body.dark-mode .footer {
   color: #e6e6e6;
 }
 
-/* ---------- ANIMATIONS ---------- */
+/*  ANIMATIONS  */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(15px); }
   to { opacity: 1; transform: translateY(0); }
@@ -161,7 +161,7 @@ body.dark-mode .footer {
   50% { transform: translateY(-10px); }
 }
 
-/* ---------- RESPONSIVE ---------- */
+/*  RESPONSIVE  */
 @media (max-width: 750px) {
   .logo img {
     width: 200px;
