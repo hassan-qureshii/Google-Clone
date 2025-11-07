@@ -1,23 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="styles.css">
-    <title>Google</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Google - Akbar Qureshi</title>
+
+  <!-- ✅ Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ✅ CSS -->
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- ✅ Favicon (optional) -->
+  <link rel="icon" href="logo.png" type="image/png">
 </head>
+
 <body>
-   <nav>
-    <div class="logo">
-        <img src="logo.png" alt="logo">
+  <!-- 🌙 Light/Dark Mode Toggle -->
+  <button id="theme-toggle" class="theme-toggle" title="Toggle Light/Dark Mode">
+    <span id="theme-icon">🌙</span>
+  </button>
+
+  <nav class="container">
+    <!-- Logo -->
+    <div class="logo fade-in">
+      <img src="logo.png" alt="Google Logo">
     </div>
 
-    <div class="input-container">
-        <form action="https://www.google.com/search" method="get">
-            <input type="text" name="q" placeholder="Search Google or type a URL" class="ab">
-            <input type="submit" value="Search" class="input-1">
-        </form> 
+    <!-- Search Bar -->
+    <div class="input-container slide-up">
+      <form action="https://www.google.com/search" method="get">
+        <input 
+          type="text" 
+          name="q" 
+          placeholder="Search Google or type a URL" 
+          class="search-input" 
+          required>
+        <input 
+          type="submit" 
+          value="Search" 
+          class="search-btn">
+      </form>
     </div>
-    </nav>
+  </nav>
+
+  <!-- Footer -->
+  <footer class="footer fade-in">
+    <p>Created by <span>Akbar Qureshi</span> | Inspired by Google</p>
+  </footer>
+
+  <!-- ✅ JavaScript -->
+  <script>
+    const toggle = document.getElementById('theme-toggle');
+    const icon = document.getElementById('theme-icon');
+    const body = document.body;
+
+    // Load saved theme from localStorage
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      icon.textContent = '☀️';
+    }
+
+    toggle.addEventListener('click', () => {
+      body.classList.toggle('dark-mode');
+      const darkMode = body.classList.contains('dark-mode');
+
+      icon.textContent = darkMode ? '☀️' : '🌙';
+      localStorage.setItem('theme', darkMode ? 'dark' : 'light');
+    });
+  </script>
 </body>
 </html>
